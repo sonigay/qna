@@ -7,7 +7,7 @@ from gensim.models import doc2vec
 from gensim.models.doc2vec import TaggedDocument
 import pandas as pd
 
-
+faqs = pd.read_csv(('test.csv'), encoding='CP949')
 
 
 client = discord.Client()
