@@ -11,7 +11,7 @@ drive.mount('/content/drive/')
 
 client = discord.Client()
 
-faqs = pd.read_csv(os.path.join('data','/content/drive/My Drive/test.csv'), encoding='CP949')
+faqs = pd.read_csv(os.path.join('data','/test.csv'), encoding='CP949')
 
 @client.event
 async def on_ready():
