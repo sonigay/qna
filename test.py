@@ -8,9 +8,7 @@ from gensim.models.doc2vec import TaggedDocument
 import pandas as pd
 import jpype
 from konlpy.tag import Kkma
-from scipy.misc import logsumexp
-from .coherencemodel import CoherenceModel
-from gensim.models.ldamodel import LdaModel
+
 
 
 
