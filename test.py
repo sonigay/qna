@@ -21,6 +21,13 @@ async def on_ready():
 	print("----------------")
 	await client.change_presence(game=discord.Game(name='업무지식 안내', type=1))
 
+	
+@client.event
+async def on_message(message):
+	
+	if message.content == '!테스트':
+		await client.send_message(message.channel, faqs)
+		
 
 
 
