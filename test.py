@@ -16,12 +16,7 @@ from konlpy.tag import Kkma
 
 faqs = pd.read_csv(('test.csv'), encoding='CP949')
 
-def Kkma_instance():
-	from konlpy import init_jvm
-	from konlpy.tag import Kkma
-	init_jvm()
-	h = Kkma()
-	return h
+
 
 
 kkma = Kkma()
@@ -34,12 +29,6 @@ def tokenize_kkma(doc):
 	jpype.attachThreadToJVM()
 	token_doc = ['/'.join(word) for word in kkma.pos(doc)]
 	return token_doc
-	
-def tokenize_kkma_noun(doc):
-	jpype.attachThreadToJVM()
-	token_doc = ['/'.join(word) for word in kkma.pos(doc) if word[1] in filter_kkma]
-	return token_doc
-
 
 
 client = discord.Client()
