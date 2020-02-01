@@ -7,11 +7,12 @@ from gensim.models import doc2vec
 from gensim.models.doc2vec import TaggedDocument
 import pandas as pd
 
-drive.mount('/content/drive/')
+
+
 
 client = discord.Client()
 
-faqs = pd.read_csv(os.path.join('data','/test.csv'), encoding='CP949')
+
 
 @client.event
 async def on_ready():
@@ -26,6 +27,7 @@ async def on_ready():
 async def on_message(message):
 	
 	if message.content == '!테스트':
+		faqs = pd.read_csv(('test.csv'), encoding='CP949')
 		await client.send_message(message.channel, faqs)
 		
 
