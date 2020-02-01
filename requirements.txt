@@ -6,4 +6,3 @@ gensim==2.1.0
 pandas
 konlpy==0.4.4
 JPype1>=0.7.0
-logsumexp
