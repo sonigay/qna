@@ -8,12 +8,14 @@ from gensim.models.doc2vec import TaggedDocument
 import pandas as pd
 import jpype
 import multiprocessing
+from konlpy import init_jvm
 from konlpy.tag import Kkma
+
 
 
 faqs = pd.read_csv(('test.csv'), encoding='CP949')
 
-
+init_jvm("<JAVA_HOME>")
 kkma = Kkma()
 filter_kkma = ['NNG',  #보통명사
 	       'NNP',  #고유명사
