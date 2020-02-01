@@ -6,7 +6,6 @@ import warnings
 from gensim.models import doc2vec
 from gensim.models.doc2vec import TaggedDocument
 import pandas as pd
-from google.colab import drive
 
 drive.mount('/content/drive/')
 
