@@ -33,15 +33,7 @@ filter_kkma = ['NNG',  #보통명사
 	       'OL' ,  #외국어
 	      ]
 
-def tokenize_kkma(doc):
-	jpype.attachThreadToJVM()
-	token_doc = ['/'.join(word) for word in kkma.pos(doc)]
-	return token_doc
-	
-def tokenize_kkma_noun(doc):
-	jpype.attachThreadToJVM()
-	token_doc = ['/'.join(word) for word in kkma.pos(doc) if word[1] in filter_kkma]
-	return token_doc
+
 	
 
 	
