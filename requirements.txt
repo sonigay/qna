@@ -5,3 +5,4 @@ PyOpenSSL
 gensim
 pandas
 jpype1
+konlpy
