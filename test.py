@@ -8,6 +8,7 @@ from gensim.models.doc2vec import TaggedDocument
 import pandas as pd
 import jpype
 import multiprocessing
+from konlpy.tag import Kkma
 
 
 
