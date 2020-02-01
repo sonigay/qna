@@ -15,7 +15,7 @@ from konlpy.tag import Kkma
 
 faqs = pd.read_csv(('test.csv'), encoding='CP949')
 
-init_jvm("<JAVA_HOME>")
+init_jvm()
 kkma = Kkma()
 filter_kkma = ['NNG',  #보통명사
 	       'NNP',  #고유명사
