@@ -4,5 +4,5 @@ pyssml
 PyOpenSSL
 gensim
 pandas
-jpype1
-konlpy
+konlpy == 0.4.4
+Jpype1 == 0.6.2
