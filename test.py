@@ -11,6 +11,25 @@ import multiprocessing
 from konlpy.tag import Kkma
 
 
+faqs = pd.read_csv(('test.csv'), encoding='CP949')
+
+
+kkma = Kkma()
+filter_kkma = ['NNG',  #보통명사
+	       'NNP',  #고유명사
+	       'OL' ,  #외국어
+	       ]
+
+def tokenize_kkma(doc):
+	jpype.attachThreadToJVM()
+	token_doc = ['/'.join(word) for word in kkma.pos(doc)]
+	return token_doc
+	
+def tokenize_kkma_noun(doc):
+	jpype.attachThreadToJVM()
+	token_doc = ['/'.join(word) for word in kkma.pos(doc) if word[1] in filter_kkma]
+	return token_doc
+
 
 
 client = discord.Client()
@@ -26,16 +45,6 @@ async def on_ready():
 	await client.change_presence(game=discord.Game(name='업무지식 안내', type=1))
 	
 	
-
-kkma = Kkma()
-filter_kkma = ['NNG',  #보통명사
-	       'NNP',  #고유명사
-	       'OL' ,  #외국어
-	      ]
-
-
-	
-
 	
 
 	
