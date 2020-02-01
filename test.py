@@ -8,8 +8,7 @@ from gensim.models.doc2vec import TaggedDocument
 import pandas as pd
 import jpype
 from konlpy.tag import Kkma
-from gensim.test.utils import common_corpus, common_dictionary
-from gensim.models import LdaModel
+
 
 
 
