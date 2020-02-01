@@ -8,7 +8,7 @@ from gensim.models.doc2vec import TaggedDocument
 import pandas as pd
 import jpype
 import multiprocessing
-from konlpy.tag import Kkma
+from konlpy.tag import Twitter
 
 
 
@@ -19,16 +19,18 @@ faqs = pd.read_csv(('test.csv'), encoding='CP949')
 
 
 
-kkma = Kkma()
-filter_kkma = ['NNG',  #보통명사
+Twitter = Twitter()
+filter_Twitter = ['NNG',  #보통명사
 	       'NNP',  #고유명사
 	       'OL' ,  #외국어
 	       ]
 
 def tokenize_kkma(doc):
-	jpype.attachThreadToJVM()
-	token_doc = ['/'.join(word) for word in kkma.pos(doc)]
+	token_doc = ['/'.join(word) for word in Twitter.pos(doc)]
 	return token_doc
+
+print(twitter.pos("히라마블로그에온걸환영해!"))
+
 
 
 client = discord.Client()
